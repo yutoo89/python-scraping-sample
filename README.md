@@ -50,3 +50,42 @@ selenium には web ドライバが付属していない。
 ```bash
 brew install chromedriver
 ```
+
+# Jupyter Notebook install
+
+## python ライブラリ install
+
+```bash
+pip install \
+    pandas \
+    matplotlib \
+    seaborn \
+    numpy \
+    scipy \
+    ipython \
+    scikit-learn \
+    mglearn \
+    jupyterlab \
+    graphviz \
+    tabulate \
+    notebook \
+    jupyter-contrib-nbextensions \
+    jupyter-nbextensions-configurator
+```
+
+Jupyter 起動
+
+```bash
+jupyter notebook --allow-root --ip=0.0.0.0
+```
+
+# selenium 起動
+
+```py
+from selenium import webdriver
+browser = webdriver.Chrome()
+```
+
+上記を実行すればブラウザが起動する。
+初回は chromedriver の開発元が未確認のため開けないと表示される。
+その場合、システム環境設定 > セキュリティとプライバシー > 一般タブで許可する。
